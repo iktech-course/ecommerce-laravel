@@ -76,6 +76,7 @@ class ProdukController extends Controller
         $itemproduk = Produk::findOrFail($id);
         $data = array('title' => 'Product Image',
                 'itemproduk' => $itemproduk);
+        // dd($data);
         return view('produk.show', $data);
     }
 
@@ -157,16 +158,16 @@ class ProdukController extends Controller
                                 ->where('id', $request->produk_id)
                                 ->first();
         if ($itemproduk) {
-            $fileupload = $request->file('image');
-            $folder = 'assets/images';
-            $itemgambar = (new ImageController)->upload($fileupload, $itemuser, $folder);
+            $image = $request->file('image');
+            $image->storeAs('public/products/', $image->hashName());
+
             // simpan ke table produk_images
             $inputan = $request->all();
-            $inputan['foto'] = $itemgambar->url;//ambil url file yang barusan diupload
+            $inputan['foto'] = $image->hashName();//ambil url file yang barusan diupload
             // simpan ke produk image
             ProdukImage::create($inputan);
             // update banner produk
-            $itemproduk->update(['foto' => $itemgambar->url]);
+            $itemproduk->update(['foto' => $image->hashName()]);
             // end update banner produk
             return back()->with('success', 'Image uploaded successfully');
         } else {
