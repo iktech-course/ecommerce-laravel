@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark mb-4 navbar-fixed-top">
   <div class="container">
-    <div class="mav-logo text-white">UKM Sido Makur</div>
+    <div class="mav-logo text-white">UKM Sido Makmur</div>
     <!-- <img src="{{ asset('images/KOJO 1.png') }}" href="/" class="img-fluid"> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,13 +12,13 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{{ URL::to('product') }}">Product</a>
+            <a class="nav-link" href="{{ URL::to('product') }}">Produk</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{{ URL::to('contact') }}">Contact</a>
+            <a class="nav-link" href="{{ URL::to('contact') }}">Kontak</a>
           </li> 
           <li class="nav-item active">
-            <a class="nav-link" href="{{ URL::to('about') }}">About</a>
+            <a class="nav-link" href="{{ URL::to('about') }}">Tentang</a>
           </li>
           <form action="/product" method="GET">
             <input type="search" class="form-search mx-sm-2 rounded-0 shadow-none" placeholder="Search..." name="q" autocomplete="off">

@@ -17,7 +17,7 @@ class HomepageController extends Controller
         $itempromo = ProdukPromo::orderBy('created_at', 'desc')->limit(3)->get();
         $itemkategori = Kategori::orderBy('nama_kategori', 'asc')->limit(6)->get();
         $itemslide = Slideshow::get();
-        $data = array('title' => 'Kojo',
+        $data = array('title' => 'UKM Sido Makmur',
             'itemproduk' => $itemproduk,
             'itempromo' => $itempromo,
             'itemkategori' => $itemkategori,

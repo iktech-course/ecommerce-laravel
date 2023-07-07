@@ -1,15 +1,15 @@
 @extends('layouts.template')
 @section('content')
-<div class="bg-auth">  
+<div class="bg-transparent">  
     <div class="container py-5 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card text-white" style="border-radius: 1rem; background:#ADC178;">
+                <div class="card text-white" style="border-radius: 1rem; background:#e69d00;">
                     <div class="card-body p-5 text-center">
                         <div class="mb-md-5 mt-md-4 pb-5">
                             <div class="d-flex flex-column align-items-center">
                                 <h1>Sign In</h1>
-                                <div class="text-center" >Halo kawan Kojo
+                                <div class="text-center" >Halo 
                                     <br>Silahkan login di bawah ini!
                                 </div>
                                 <form method="POST" action="{{ route('login') }}" class="form-auth">

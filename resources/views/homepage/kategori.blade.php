@@ -2,9 +2,9 @@
 @section('content')
 <div class="container" style="margin-bottom:70px;">
   <!-- kategori produk -->
-  <div class="card" style="padding: 20px; background-color: #ADC178">
+ <!-- <div class="card" style="padding: 20px; background-color: #e69d00">
     <div class="bg-transparent" >
-      <h2 class="text-left" style="font-weight:bold; margin-bottom: 20px;">Product Category</h2>
+      <h2 class="text-left" style="font-weight:bold; margin-bottom: 20px;">Kategori Produk</h2>
         <div class="btn-group d-flex flex-wrap shadow-none mt-1 mt-lg-1 mt-md-1 mt-xl-1 ms-2 ms-lg-2 ms-md-2 ms-xl-2">
           @foreach($itemkategori as $kategori)
             <a style="width: 150px; font-size: 13px; font-weight:bold; font-family: 'Poppins' sans-serif;" href="{{ URL::to('category/'.$kategori->slug_kategori) }}" class="btn mt-1 mt-lg-1 mt-md-1 mt-xl-1 mx-2 mx-lg-2 mx-md-2 mx-xl-2 rounded">
@@ -13,7 +13,7 @@
           @endforeach
         </div>
     </div>
-  </div>
+  </div>-->
   <!-- end kategori produk -->
   <!-- produk Terbaru-->
   <div class="row mt-4" style="margin-top: 30px; margin-bottom: 30px;">
@@ -33,7 +33,7 @@
           @endif
         </a>
       </div>
-        <div class="card-body" style="border:none; background-color: #ADC178;">
+        <div class="card-body" style="border:none; background-color: #e9ecef;">
         <div class="row mt-4">
         <div class="col">  
             <a class="text-decoration-none" style="color: black;">
